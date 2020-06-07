@@ -1,37 +1,50 @@
 // pages/index2/index2.js
 Page({
-  
   data: {
-    value:'',
-    show: false,
-    arr_currency:[
-      {name: "CAD"},
-      {name: "USD"},
-      {name: "EUR"},
-      {name: "JPY"},
-      {name: "CNY"},
-    ]
-    
+    value: '',
+    show1: false,
+    show2: false,
+    arr1_currency: [
+      { name: 'CAD' },
+      { name: 'USD' },
+      { name: 'EUR' },
+      { name: 'JPY' },
+      { name: 'CNY' },
+    ],
+    arr2_currency: [
+      { name: 'CAD' },
+      { name: 'USD' },
+      { name: 'EUR' },
+      { name: 'JPY' },
+      { name: 'CNY' },
+    ],
   },
-  onChange(event) {
-    // event.detail 为当前输入的值
-    console.log(event.detail);
-  },
-  onTap(){
+  onChange(event) {},
+  onTap1() {
     this.setData({
-      show:true
-    })
+      show1: true,
+    });
   },
-  onClose(){
+  onTap2() {
     this.setData({
-      show:false
-    })
+      show2: true,
+    });
   },
-  onSelect(res){
-    console.log(res.detail.name)
+  onClose() {
     this.setData({
-      selected_currency:res.detail.name
-    })
+      show1: false,
+      show2: false,
+    });
+  },
+  onSelect1(res) {
+    this.setData({
+      selected_currency1: res.detail.name,
+    });
+  },
+  onSelect2(res) {
+    this.setData({
+      selected_currency2: res.detail.name,
+    });
   },
   /**
    * Lifecycle function--Called when page load

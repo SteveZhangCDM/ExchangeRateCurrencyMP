@@ -1,39 +1,19 @@
 <view class="img_container">
-  <image src="../../images/money.png"></image>
+	<image src="../../images/money.png"></image>
 </view>
 <view>请输入币种和金额！</view>
 <view class="currency">
-<van-action-sheet
-  show="{{ show }}"
-  actions="{{ arr_currency }}"
-  bind:close="onClose"
-  bind:select="onSelect"
-/>
-<van-button plain hairline type="primary" bindtap="onTap">选择: {{selected_currency}}</van-button>
-  <van-cell-group>
-    <van-field
-        value="{{ value }}"
-        placeholder="请输入金额"
-        border="{{ false }}"
-        bind:change="onChange"
-    />
-</van-cell-group>
+	<van-action-sheet show="{{ show1 }}" actions="{{ arr1_currency }}" bind:close="onClose" bind:select="onSelect1" />
+	<van-button plain hairline type="primary" bindtap="onTap1">选择: {{selected_currency1}}</van-button>
+	<van-cell-group>
+		<van-field value="{{ value }}" placeholder="请输入金额" border="{{ false }}" bind:change="onChange" />
+	</van-cell-group>
 </view>
 
 <view class="currency">
-<van-action-sheet
-  show="{{ show }}"
-  actions="{{ arr_currency }}"
-  bind:close="onClose"
-  bind:select="onSelect"
-/>
-<van-button plain hairline type="primary" bindtap="onTap">选择: {{selected_currency}}</van-button>
-  <van-cell-group>
-    <van-field
-        value="{{ value }}"
-        placeholder="请输入金额"
-        border="{{ false }}"
-        bind:change="onChange"
-    />
-</van-cell-group>
+	<van-action-sheet show="{{ show2 }}" actions="{{ arr2_currency }}" bind:close="onClose" bind:select="onSelect2" />
+	<van-button plain hairline type="primary" bindtap="onTap2">选择: {{selected_currency2}}</van-button>
+	<van-cell-group>
+		<van-field value="{{ value }}" placeholder="请输入金额" border="{{ false }}" bind:change="onChange" />
+	</van-cell-group>
 </view>
