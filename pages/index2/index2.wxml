@@ -1,0 +1,39 @@
+<view class="img_container">
+  <image src="../../images/money.png"></image>
+</view>
+<view>请输入币种和金额！</view>
+<view class="currency">
+<van-action-sheet
+  show="{{ show }}"
+  actions="{{ arr_currency }}"
+  bind:close="onClose"
+  bind:select="onSelect"
+/>
+<van-button plain hairline type="primary" bindtap="onTap">选择: {{selected_currency}}</van-button>
+  <van-cell-group>
+    <van-field
+        value="{{ value }}"
+        placeholder="请输入金额"
+        border="{{ false }}"
+        bind:change="onChange"
+    />
+</van-cell-group>
+</view>
+
+<view class="currency">
+<van-action-sheet
+  show="{{ show }}"
+  actions="{{ arr_currency }}"
+  bind:close="onClose"
+  bind:select="onSelect"
+/>
+<van-button plain hairline type="primary" bindtap="onTap">选择: {{selected_currency}}</van-button>
+  <van-cell-group>
+    <van-field
+        value="{{ value }}"
+        placeholder="请输入金额"
+        border="{{ false }}"
+        bind:change="onChange"
+    />
+</van-cell-group>
+</view>
